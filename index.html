@@ -32,48 +32,50 @@
 
 <p>A small set of tools I've created to make Python programming a bit nicer. The main one is CmdLine, a decorator that automatically creates command-line options using argparse. Here's how you use it:</p>
 
-<p>from betools import CmdLine</p>
+<pre><code>from betools import CmdLine
 
-<p><a href="https://github.com/CmdLine" class="user-mention">@CmdLine</a>("t", "option1")
+@CmdLine("t", "option1")
 def test():
     """
     Description of option1
     """
-    print("option1")</p>
+    print("option1")
 
-<p><a href="https://github.com/CmdLine" class="user-mention">@CmdLine</a>("u", "option2")
+@CmdLine("u", "option2")
 def test():
     """
     Description of option2
     """
-    print("option2")</p>
+    print("option2")
 
-<p><a href="https://github.com/CmdLine" class="user-mention">@CmdLine</a>("v", "option3")
+@CmdLine("v", "option3")
 def test():
     """
     Description of option3
     """
-    print("option3")</p>
+    print("option3")
 
-<p>if <strong>name</strong> == '<strong>main</strong>': CmdLine.run()</p>
 
-<p>""" Output:
+if __name__ == '__main__': CmdLine.run()
+
+""" Output:
 +&gt;python cmdlinedemo.py
-usage: cmdlinedemo.py [-h] [-t] [-u] [-v]</p>
+usage: cmdlinedemo.py [-h] [-t] [-u] [-v]
 
-<p>optional arguments:
+optional arguments:
   -h, --help     show this help message and exit
   -t, --option1  Description of option1
   -u, --option2  Description of option2
-  -v, --option3  Description of option3</p>
+  -v, --option3  Description of option3
 
-<p>C:\Users\Bruce\Dropbox__TIJ4-ebook
+C:\Users\Bruce\Dropbox\__TIJ4-ebook
 +&gt;python cmdlinedemo.py -u
-option2</p>
+option2
 
-<p>C:\Users\Bruce\Dropbox__TIJ4-ebook
+C:\Users\Bruce\Dropbox\__TIJ4-ebook
 +&gt;
-"""</p>
+"""
+</code></pre>
       </section>
     </div>
     <footer>
