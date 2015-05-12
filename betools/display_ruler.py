@@ -1,7 +1,6 @@
-#! python
 """
-ruler() generates a string ruler with embedded text
-head() does the same thing but prints it
+ruler() generates a string ruler with embedded text.
+head() does the same thing but prints it.
 """
 __all__ = ['ruler', 'head']
 
