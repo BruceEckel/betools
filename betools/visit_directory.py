@@ -3,6 +3,7 @@
 Visits a directory and automatically returns to original
 directory when you're done.
 """
+__all__ = ['visitDir']
 from contextlib import contextmanager
 import os
 

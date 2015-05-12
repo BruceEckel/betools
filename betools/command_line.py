@@ -3,6 +3,7 @@
 Decorator adds a new command-line option and manages argparse.
 See http://www.artima.com/weblogs/viewpost.jsp?thread=240845
 """
+__all__ = ['CmdLine']
 import argparse
 
 
