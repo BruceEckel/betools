@@ -14,17 +14,17 @@ class CmdLine:
     commands = dict()
     letterflags = set()
 
-    def __init__(self, letterFlag, wordFlag, num_args=None):
+    def __init__(self, letterFlag, wordFlag=None, num_args=None):
         self.wordFlag = wordFlag
         self.letterFlag = letterFlag
         self.num_args = num_args
-        assert wordFlag not in CmdLine.commands, \
-            "Duplicate command argument word flags"
         assert letterFlag not in CmdLine.letterflags, \
             "Duplicate command argument letter flags"
         CmdLine.letterflags.add(letterFlag)
 
     def __call__(self, func):
+        if not self.wordFlag:
+            self.wordFlag = func.__name__
         if self.num_args:
             CmdLine.parser.add_argument(
                 "-" + self.letterFlag,

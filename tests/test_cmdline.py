@@ -27,6 +27,27 @@ def test_3():
     """
     print("option3")
 
+@CmdLine("4")
+def option4():
+    """
+    Use the function name as the word tag.
+    """
+    print("option4")
+
+@CmdLine("5")
+def option5():
+    """
+    Use the function name as the word tag.
+    """
+    print("option5")
+
+@CmdLine("6")
+def option6():
+    """
+    Use the function name as the word tag.
+    """
+    print("option6")
+
 def test_main():
     CmdLine.run()
 
