@@ -1,7 +1,7 @@
 Bruce's Handy Python Tools
 ==========================
 
-A set of tools I created to simplify aspects of Python programming. 
+A set of small tools I created to simplify aspects of Python programming. 
 
 ## [Docs Here](http://bruceeckel.github.io/betools/)
 
