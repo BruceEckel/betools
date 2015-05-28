@@ -1,0 +1,54 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Welcome to betools\n\n\nA small set of tools I've created to make Python programming a bit nicer.\n\n\nHosted on Github \nhttps://github.com/BruceEckel/betools\n\n\nComponents\n\n\n\n\n@CmdLine\n - Decorator to automate \nargparse\n\n\nvisitDir\n - A context manager to visit a directory and automatically return\n\n\nruler()\n  - Generates a string ruler with embedded text.\n\n\nhead()\n   - Does the same as above but prints it.\n\n\n\n\nInstallation\n\n\nDownload from Gitub, then run:\n\n\npython setup.py install",
+            "title": "Home"
+        },
+        {
+            "location": "/#welcome-to-betools",
+            "text": "A small set of tools I've created to make Python programming a bit nicer.  Hosted on Github  https://github.com/BruceEckel/betools",
+            "title": "Welcome to betools"
+        },
+        {
+            "location": "/#components",
+            "text": "@CmdLine  - Decorator to automate  argparse  visitDir  - A context manager to visit a directory and automatically return  ruler()   - Generates a string ruler with embedded text.  head()    - Does the same as above but prints it.",
+            "title": "Components"
+        },
+        {
+            "location": "/#installation",
+            "text": "Download from Gitub, then run:  python setup.py install",
+            "title": "Installation"
+        },
+        {
+            "location": "/cmdline/",
+            "text": "@CmdLine\n\n\nMakes it trivial to use argparse. Just add the decorator to\nfunctions that you want to publish as command-line arguments.\n\n\nUsage\n\n\n#: tests/demo_cmdline.py\nfrom betools import CmdLine\n\n@CmdLine(\n1\n, \nword_tag\n)\ndef option_one():\n    \n\n    Description of first option\n    \n\n    print(\noption_one\n)\n\n@CmdLine(\nf\n)\ndef fn_name_as_word_tag():\n    \n\n    With no explicit word_tag, uses\n    the function name as the word_tag.\n    \n\n    print(\nsecond option\n)\n\n@CmdLine(\no\n, num_args=1)\ndef one_arg():\n    \n\n    Takes a single command-line argument\n    \n\n    print(\none_arg \n + sys.argv[2])\n\n@CmdLine(\nt\n, num_args=2)\ndef two_args():\n    \n\n    Takes two command-line arguments\n    \n\n    print(\ntwo_args \n + sys.argv[2] + \n \n + sys.argv[3])\n\n# num_args='+', '*' not yet supported\n# Passing command-line args as function args might also be good\n\nif __name__ == '__main__':\n    CmdLine.run()\n\noutput = \n\nusage: demo_cmdline.py [-h] [-1] [-f] [-o ONE_ARG] [-t TWO_ARGS TWO_ARGS]\n\noptional arguments:\n  -h, --help            show this help message and exit\n  -1, --word_tag        Description of first option\n  -f, --fn_name_as_word_tag\n                        With no explicit word_tag, uses the function name as\n                        the word_tag.\n  -o ONE_ARG, --one_arg ONE_ARG\n                        Takes a single command-line argument\n  -t TWO_ARGS TWO_ARGS, --two_args TWO_ARGS TWO_ARGS\n                        Takes two command-line arguments",
+            "title": "CmdLine"
+        },
+        {
+            "location": "/cmdline/#cmdline",
+            "text": "Makes it trivial to use argparse. Just add the decorator to\nfunctions that you want to publish as command-line arguments.  Usage  #: tests/demo_cmdline.py\nfrom betools import CmdLine\n\n@CmdLine( 1 ,  word_tag )\ndef option_one():\n     \n    Description of first option\n     \n    print( option_one )\n\n@CmdLine( f )\ndef fn_name_as_word_tag():\n     \n    With no explicit word_tag, uses\n    the function name as the word_tag.\n     \n    print( second option )\n\n@CmdLine( o , num_args=1)\ndef one_arg():\n     \n    Takes a single command-line argument\n     \n    print( one_arg   + sys.argv[2])\n\n@CmdLine( t , num_args=2)\ndef two_args():\n     \n    Takes two command-line arguments\n     \n    print( two_args   + sys.argv[2] +     + sys.argv[3])\n\n# num_args='+', '*' not yet supported\n# Passing command-line args as function args might also be good\n\nif __name__ == '__main__':\n    CmdLine.run()\n\noutput =  \nusage: demo_cmdline.py [-h] [-1] [-f] [-o ONE_ARG] [-t TWO_ARGS TWO_ARGS]\n\noptional arguments:\n  -h, --help            show this help message and exit\n  -1, --word_tag        Description of first option\n  -f, --fn_name_as_word_tag\n                        With no explicit word_tag, uses the function name as\n                        the word_tag.\n  -o ONE_ARG, --one_arg ONE_ARG\n                        Takes a single command-line argument\n  -t TWO_ARGS TWO_ARGS, --two_args TWO_ARGS TWO_ARGS\n                        Takes two command-line arguments",
+            "title": "@CmdLine"
+        },
+        {
+            "location": "/visitdir/",
+            "text": "VisitDir",
+            "title": "VisitDir"
+        },
+        {
+            "location": "/visitdir/#visitdir",
+            "text": "",
+            "title": "VisitDir"
+        },
+        {
+            "location": "/ruler/",
+            "text": "ruler",
+            "title": "Ruler"
+        },
+        {
+            "location": "/ruler/#ruler",
+            "text": "",
+            "title": "ruler"
+        }
+    ]
+}
