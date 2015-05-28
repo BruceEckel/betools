@@ -7,7 +7,6 @@ __all__ = ['CmdLine']
 
 import argparse
 
-
 class CmdLine:
 
     parser = argparse.ArgumentParser()

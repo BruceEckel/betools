@@ -1,0 +1,6 @@
+site_name: betools for Python
+pages:
+- Home: index.md
+- CmdLine: cmdline.md
+- VisitDir: visitdir.md
+- Ruler: ruler.md
