@@ -1,4 +1,7 @@
 site_name: betools for Python
+site_url: http://bruceeckel.github.io/betools/
+repo_url: https://github.com/BruceEckel/betools
+
 pages:
 - Home: index.md
 - CmdLine: cmdline.md
