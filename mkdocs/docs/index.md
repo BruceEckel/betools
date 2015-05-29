@@ -13,6 +13,10 @@ Hosted on Github [https://github.com/BruceEckel/betools](https://github.com/Bruc
 
 ## Installation
 
-Download from Gitub, then run:
+Using **pip**:
+
+    pip install git+https://github.com/BruceEckel/betools
+
+Or, download from Gitub, then run:
 
     python setup.py install
