@@ -7,6 +7,10 @@ A set of small tools I created to simplify aspects of Python programming.
 
 To install:
 ```
+pip install git+https://github.com/BruceEckel/betools
+```
+Or, if you've downloaded and unpacked the zip file:
+```
 python setup.py install
 ```
 
