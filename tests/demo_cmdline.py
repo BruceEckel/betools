@@ -1,4 +1,7 @@
 #: tests/demo_cmdline.py
+"""
+Basic Demo of @CmdLine
+"""
 # Test the local one, not the installed one:
 import sys
 sys.path.insert(0, "..")

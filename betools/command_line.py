@@ -6,10 +6,11 @@ http://www.artima.com/weblogs/viewpost.jsp?thread=240845
 __all__ = ['CmdLine']
 
 import argparse
+import __main__ as main
 
 class CmdLine:
 
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description = main.__doc__)
     commands = dict()
     letterflags = set()
 
