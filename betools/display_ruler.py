@@ -10,7 +10,7 @@ def ruler(arg=None, sep="_", print_=False, width=60):
     else:
         result = "".center(width, sep) + "\n"
     if print_:
-        print(result)
+        print(result.rstrip())
     else:
         return result
 
