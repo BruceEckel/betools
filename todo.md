@@ -1,5 +1,10 @@
+ToDo List
+=========
+
 -   [ ] \@CmdLine with no args doesn't have the one-char flag, only the
     function-name -- flag
+
+-   [ ] \@CmdLine print the name or docstring of its command when it runs.
 
 -   [ ] Figure out how to install "betools" command-line command for both
     windows and mac using pip install (a useful piece of research in itself)
