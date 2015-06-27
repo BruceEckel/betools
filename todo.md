@@ -16,3 +16,10 @@ ToDo List
 -   [ ] Option **run()** argument: default command if no flags are used
 
 -   [ ] More complete docs and tests
+
+-   [ ] Support for cleaning/creating/cloning/populating a target directory (one
+    that is rebuilt from scratch)
+
+-   [ ] timestamp-based and/or comparison-based dependency management (tells you
+    if something needs to be rebuilt). Seems like there might already exist a
+    library to do this.
