@@ -16,31 +16,30 @@ class CmdLine:
     commands = dict()
     letterflags = set()
 
-    def __init__(self, letterFlag, wordFlag=None, num_args=None):
+    def __init__(self, letterFlag=None, wordFlag=None, num_args=None):
         self.wordFlag = wordFlag
         self.letterFlag = letterFlag
-        self.num_args = num_args
         assert letterFlag not in CmdLine.letterflags, \
             "Duplicate command argument letter flags"
-        CmdLine.letterflags.add(letterFlag)
+        if letterFlag:
+            CmdLine.letterflags.add(letterFlag)
+        self.num_args = num_args
 
     def __call__(self, func):
         if not self.wordFlag:
             self.wordFlag = func.__name__
+
+        args = ["--" + self.wordFlag]
+        if self.letterFlag:
+            args = ["-" + self.letterFlag] + args # Order is important
+
+        kwargs = { "help" : func.__doc__ }
         if self.num_args:
-            CmdLine.parser.add_argument(
-                "-" + self.letterFlag,
-                "--" + self.wordFlag,
-                nargs=self.num_args,
-                help=func.__doc__
-            )
+            kwargs["nargs"] = self.num_args
         else:
-            CmdLine.parser.add_argument(
-                "-" + self.letterFlag,
-                "--" + self.wordFlag,
-                action='store_true',
-                help=func.__doc__
-            )
+            kwargs["action"] = 'store_true'
+
+        CmdLine.parser.add_argument(*args, **kwargs)
         CmdLine.commands[self.wordFlag] = func
         return func # No wrapping needed
 

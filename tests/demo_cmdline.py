@@ -39,6 +39,14 @@ def two_args():
 # num_args='+', '*' not yet supported
 # Passing command-line args as function args might also be good
 
+@CmdLine()  # Hmm. Why are the parens required for a decorator?
+def no_one_letter_flag():
+    """
+    Only does the extended version
+    """
+    print("Only uses the full name for the argument")
+
+
 if __name__ == '__main__':
     CmdLine.run()
 
