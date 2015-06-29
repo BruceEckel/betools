@@ -9,8 +9,10 @@ import argparse
 import __main__ as main
 
 class CmdLine:
-
-    parser = argparse.ArgumentParser(description = main.__doc__.strip())
+    if main.__doc__:
+        parser = argparse.ArgumentParser(description = main.__doc__.strip())
+    else:
+        parser = argparse.ArgumentParser()
     commands = dict()
     letterflags = set()
 
