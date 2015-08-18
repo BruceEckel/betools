@@ -23,3 +23,12 @@ ToDo List
 -   [ ] timestamp-based and/or comparison-based dependency management (tells you
     if something needs to be rebuilt). Seems like there might already exist a
     library to do this.
+
+-   [ ] BuildDirectory class. You give it a name, and it makes sure that dir exists.
+        You can cd to the BuildDirectory (maybe it's a Path object?). You can "sweep()"
+        all the files out of the BuildDirectory, and "remove()" it.
+
+-   [ ] DirectEdit context manager. Modify a file as if it's a text object. Writes and
+        Closed the file automatically. Requires some overloading or inherit from an io object.
+
+
