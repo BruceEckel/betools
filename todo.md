@@ -1,6 +1,8 @@
 ToDo List
 =========
 
+-   [ ] Multi-character short codes, so you can say `command -d1`, `command -fex`, etct.
+
 -   [ ] Separate CmdLine into its own repository
 
 -   [ ] \@CmdLine with no args doesn't have the one-char flag, only the
